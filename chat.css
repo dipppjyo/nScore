@@ -1,73 +1,123 @@
-/* style.css */
+/* chat.css */
 
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+a.insta {
+    text-decoration: none;
+    color: #fff;
+    background-color: #E1306C;
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
     text-align: center;
+    display: inline-block;
+    width: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+a.insta:hover {
+    background-color: #C13584;
+    transform: scale(1.05);
 }
 
 #scorecard {
-    font-size: 2em;
+    font-size: 26px;
     font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
+    color: #222;
+    margin-bottom: 15px;
+    padding: 5px 15px;
+    background: linear-gradient(90deg, #008CBA, #005f73);
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
 }
 
 .container {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 300px;
 }
 
-span {
-    font-size: 1.2em;
-    margin: 0 5px;
+.container span {
+    font-size: 16px;
+    color: #444;
+    font-weight: bold;
+    margin: 5px 0;
+    display: inline-block;
 }
 
 .button-css {
+    margin-top: 15px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 10px;
+    justify-content: center;
 }
 
-button {
-    padding: 10px 15px;
-    font-size: 1em;
-    color: white;
-    background-color: #007bff;
+.button-css button {
+    background-color: #008CBA;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
+    flex: 1 1 calc(33.333% - 10px); /* Adjust for small screens */
+    max-width: 80px;
 }
 
-button:hover {
-    background-color: #0056b3;
+.button-css button:hover {
+    background-color: #005f73;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-button:active {
-    background-color: #004085;
+.button-css button:active {
+    background-color: #003f5c;
+    transform: scale(0.95);
 }
 
-.insta {
-    display: block;
-    position: relative;
-    top: 800px;
-    color: #531163;
-    text-decoration: none;
-    font-weight: bold;
-}
+/* Media Query for very small screens (e.g., smartphones) */
+@media (max-width: 480px) {
+    a.insta {
+        font-size: 10px;
+        padding: 6px 10px;
+        border-radius: 10px;
+    }
 
-.insta:hover {
-    text-decoration: underline;
-}
+    #scorecard {
+        font-size: 22px;
+        padding: 5px 10px;
+    }
 
-body{
-    background-image: url('sketch.jpg');
-    background-size: cover;
+    .container span {
+        font-size: 14px;
+    }
+
+    .button-css button {
+        font-size: 12px;
+        padding: 8px 10px;
+        flex: 1 1 30%; /* Adjust button size further for small screens */
+        max-width: 70px;
+    }
 }
