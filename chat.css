@@ -1,123 +1,98 @@
-/* chat.css */
-
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow-x: hidden;
-}
-
-a.insta {
-    text-decoration: none;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #ff7eb3, #8e44ad);
     color: #fff;
-    background-color: #E1306C;
-    padding: 8px 12px;
-    border-radius: 15px;
-    font-weight: bold;
-    font-size: 12px;
-    margin-bottom: 20px;
-    transition: all 0.3s ease;
     text-align: center;
-    display: inline-block;
-    width: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-a.insta:hover {
-    background-color: #C13584;
-    transform: scale(1.05);
-}
-
-#scorecard {
-    font-size: 26px;
-    font-weight: bold;
-    color: #222;
-    margin-bottom: 15px;
-    padding: 5px 15px;
-    background: linear-gradient(90deg, #008CBA, #005f73);
-    color: #fff;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    display: inline-block;
 }
 
 .container {
-    background: #ffffff;
+    margin: 20px auto;
+    max-width: 400px;
+    padding: 20px;
     border-radius: 10px;
-    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: 90%;
-    max-width: 300px;
 }
 
 .container span {
-    font-size: 16px;
-    color: #444;
-    font-weight: bold;
-    margin: 5px 0;
+    font-size: 1.2rem;
     display: inline-block;
+    margin: 5px 0;
 }
 
+/* Buttons */
 .button-css {
-    margin-top: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 400px;
+    padding: 0 20px;
 }
 
 .button-css button {
-    background-color: #008CBA;
-    color: #fff;
-    font-size: 14px;
-    padding: 8px 15px;
+    font-size: 1.5rem;
+    padding: 15px 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    background: #4caf50;
+    color: #fff;
     cursor: pointer;
-    transition: all 0.3s ease;
-    flex: 1 1 calc(33.333% - 10px); /* Adjust for small screens */
-    max-width: 80px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, background-color 0.3s;
 }
 
 .button-css button:hover {
-    background-color: #005f73;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    background-color: #45a049;
 }
 
 .button-css button:active {
-    background-color: #003f5c;
-    transform: scale(0.95);
+    transform: scale(1.05);
 }
 
-/* Media Query for very small screens (e.g., smartphones) */
+/* Instagram Link */
+.insta {
+    display: block;
+    margin-top: 40px;
+    padding: 15px;
+    text-align: center;
+    font-size: 1rem;
+    text-decoration: none;
+    background: #1e90ff;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.2s;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.insta:hover {
+    background: #007acc;
+    transform: scale(1.05);
+}
+
+.insta:active {
+    transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .button-css {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 480px) {
-    a.insta {
-        font-size: 10px;
-        padding: 6px 10px;
-        border-radius: 10px;
-    }
-
-    #scorecard {
-        font-size: 22px;
-        padding: 5px 10px;
-    }
-
-    .container span {
-        font-size: 14px;
-    }
-
     .button-css button {
-        font-size: 12px;
-        padding: 8px 10px;
-        flex: 1 1 30%; /* Adjust button size further for small screens */
-        max-width: 70px;
+        font-size: 1.2rem;
+        padding: 12px 8px;
     }
-}
+    .insta {
+        font-size: 0.9rem;
+    }
+    }
