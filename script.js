@@ -59,6 +59,11 @@ function End() {
     balls.innerHTML=0;
     const overs = document.querySelector('.overs');
     overs.innerHTML=0;
+
+    localStorage.setItem('runs',run.innerHTML)
+    localStorage.setItem('balls',balls.innerHTML)
+    localStorage.setItem('overs',overs.innerHTML)
+    localStorage.setItem('wickets',wicket.innerHTML)
 }
 
 function gameOver(){
