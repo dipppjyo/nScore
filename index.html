@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scorecard</title>
+    <link rel="stylesheet" href="chat.css" >
+</head>
+<body> 
+    <a class="insta" href="https://www.instagram.com/graphite.glimpse/profilecard/?igsh=MW1tY3NnNHd2ODV4ZA==">Visit my Instagram Profile</a>
+    <p id="scorecard">SCORECARD</p>
+<div class="container">
+
+   
+    <span>RUN:</span>
+    <span class="js-run">00</span>
+    <span>-</span>
+    <span class="wickets">0</span>
+     <br>
+     <span>Overs:</span>
+     <span class="overs">0</span>
+     <span>.</span>
+     
+     <span class="balls">0</span>
+     <br>
+     <span>Target:</span>
+     <span class="js-target"></span>
+   </div>  
+<div class="button-css">
+    <button onclick="wicket();
+    gameOver();
+    " class="js-wicket">W</button>
+
+    <button onclick=" runSingle() " class="js-single">1+</button>
+    <button onclick=" runFour() " class="js-four">4+</button>
+    <button  onclick=" runSix() "class="js-six">6+</button>
+    <button onclick=" ball()" class="js-ball">B+</button>
+    <button onclick=" runSingle() " class="js-wide">Wide</button>
+    <button onclick=" runSingle()" class="js-no-ball"> No Ball</button>
+    <button onclick="End()" >END</button>
+ </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
